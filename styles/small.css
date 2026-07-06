@@ -28,50 +28,52 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background: #fff;
+    position: relative;
 }
 
-.logo {
+.logo-box {
     display: flex;
     align-items: center;
-    gap: .7rem;
-}
-
-.logo img {
-    width: 50px;
-}
-
-.logo span {
-    font-size: 1.3rem;
-    font-weight: bold;
+    gap: .75rem;
 }
 
 #menu {
+    font-size: 2rem;
     background: none;
     border: none;
-    font-size: 2rem;
     cursor: pointer;
 }
 
-nav {
-    width: 100%;
-}
-
+/* Hide navigation by default */
 .navigation {
     display: none;
     list-style: none;
 }
 
+/* Show when JS adds .open */
 .navigation.open {
     display: block;
 }
 
-.navigation li a {
+/* Dropdown */
+nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 220px;
+    z-index: 100;
+}
+
+.navigation a {
     display: block;
-    padding: 1rem;
     background: #222;
-    color: white;
-    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    background: #555;
 }
 
 /* MAIN */

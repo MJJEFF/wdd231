@@ -70,35 +70,53 @@ function displayCourses(courseList) {
 
     courseList.forEach(course => {
 
-        const card = document.createElement("div");
+        const div = document.createElement("div");
 
-        card.className = course.completed
-            ? "course-card completed"
-            : "course-card not-completed";
+        div.classList.add("course-card");
 
-        card.innerHTML = `
-            <strong>${course.subject} ${course.number}</strong>
+        if (course.completed) {
+            div.classList.add("completed");
+        } else {
+            div.classList.add("not-completed");
+        }
+
+        div.innerHTML = `
+            ${course.subject} ${course.number}
         `;
 
-        courseContainer.appendChild(card);
+        courseContainer.appendChild(div);
 
     });
 
-    const credits = courseList.reduce((sum, course) => sum + course.credits, 0);
+    totalCredits.textContent =
+        courseList.reduce((sum, course) => sum + course.credits, 0);
 
-    totalCredits.textContent = credits;
 }
 
 displayCourses(courses);
 
 document.querySelector("#all").addEventListener("click", () => {
+
     displayCourses(courses);
+
 });
 
 document.querySelector("#wdd").addEventListener("click", () => {
-    displayCourses(courses.filter(course => course.subject === "WDD"));
+
+    displayCourses(
+
+        courses.filter(course => course.subject === "WDD")
+
+    );
+
 });
 
 document.querySelector("#cse").addEventListener("click", () => {
-    displayCourses(courses.filter(course => course.subject === "CSE"));
+
+    displayCourses(
+
+        courses.filter(course => course.subject === "CSE")
+
+    );
+
 });

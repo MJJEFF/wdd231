@@ -1,14 +1,14 @@
 const menu = document.querySelector("#menu");
-const nav = document.querySelector(".navigation");
+const navigation = document.querySelector(".navigation");
 
 menu.addEventListener("click", () => {
 
-    nav.classList.toggle("open");
+    navigation.classList.toggle("open");
 
-    if (nav.classList.contains("open")) {
-        menu.textContent = "✕";
+    if (navigation.classList.contains("open")) {
+        menu.innerHTML = "&times;";
     } else {
-        menu.textContent = "☰";
+        menu.innerHTML = "&#9776;";
     }
 
 });
