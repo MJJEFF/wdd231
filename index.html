@@ -4,14 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testing</title>
+    <meta name="description" content="Jeffrey Akanama's course homepage showcasing projects and coursework.">
+    <meta name="author" content="Jeffrey Akanama">
+    <title>Jeffrey Akanama's Course Homepage</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/course.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
 </head>
 
 <body>
-    THIS IS A TEST
+
+    <header>
+        <div class="logo">
+            <img src="images/logo.svg" alt="website logo" width="50" height="50">
+            <span>Jeffrey Akanama</span>
+        </div>
+        <button id="menu" aria-label="Menu">☰</button>
+
+        <nav id="nav">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="chamber/index.html">Chamber</a></li>
+                <li><a href="final/index.html">Final Project</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <h1>Welcome to My Course Homepage</h1>
+        <div class="top-grid">
+            <section class="card">
+                <h2>About Me</h2>
+                <p>Hello! My name is Jeffrey Akanama. I enjoy building responsive
+                    websites and continuously improving my coding skills through practical
+                    projects, I also build modern, responsive, and scalable web apps. My goal is to become a
+                    professional full-stack software developer.
+                </p>
+            </section>
+
+            <section class="card">
+                <h2>Student Photo</h2>
+                <img src="images/jeffrey-profile.jpeg" alt="Jeffrey Akanama" class="profile-photo" width="250" height="300">
+            </section>
+
+        </div>
+
+        <section class="card courses">
+        
+            <h2>Web Certificate Courses</h2>
+        
+            <div class="filter-buttons">
+                <button id="all">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
+        
+            <div id="course-container"></div>
+        
+            <p class="credits">
+                The total credits for courses listed above is
+                <strong><span id="total-credits">0</span></strong>
+            </p>
+        
+        </section>
+    </main>
+
+    <footer>
+    
+        <div class="social">
+    
+            <a href="https://www.linkedin.com/in/jeffreyakanama" target="_blank">
+                <img src="images/linkedin.svg" alt="LinkedIn">
+            </a>
+    
+            <a href="https://github.com/MJJEFF" target="_blank">
+                <img src="images/github.svg" alt="GitHub">
+            </a>
+    
+            <a href="https://x.com/MJ_JEFF_" target="_blank">
+                <img src="images/x.svg" alt="X">
+            </a>
+    
+        </div>
+    
+        <p>
+            &copy;
+            <span id="currentyear"></span>
+            Jeffrey Akanama • Delta State, Nigeria
+        </p>
+    
+        <p id="lastModified"></p>
+    
+    </footer>
+
 </body>
-<footer>
-    <p>THIS IS A FOOTER</p>
-</footer>
 
 </html>
