@@ -1,0 +1,28 @@
+{
+    "familyName": "Akanama",
+    "moveInDate": "2025-03-15",
+    "numberOfPeople": 4,
+    "visitedByBishopric": true,
+    "familyMembers": [
+        {
+            "name": "Jeffrey Akanama",
+            "gender": "Male",
+            "birthdate": "2007-05-10"
+        },
+        {
+            "name": "Mary Akanama",
+            "gender": "Female",
+            "birthdate": "1985-09-22"
+        },
+        {
+            "name": "John Akanama",
+            "gender": "Male",
+            "birthdate": "1982-11-03"
+        },
+        {
+            "name": "Grace Akanama",
+            "gender": "Female",
+            "birthdate": "2012-01-18"
+        }
+    ]
+}
