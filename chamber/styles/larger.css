@@ -1,0 +1,47 @@
+@media screen and (min-width: 600px) {
+    #menu {
+        display: none;
+    }
+
+    nav#nav {
+        display: block;
+        position: static;
+        background-color: transparent;
+    }
+
+    nav#nav ul {
+        flex-direction: row;
+        gap: 1.25rem;
+    }
+
+    nav#nav a {
+        border-top: none;
+        padding: 0.4rem 0.2rem;
+    }
+
+    #directory.grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 900px) {
+    header {
+        padding: 1rem 2.5rem;
+    }
+
+    .page-banner,
+    .directory-controls,
+    #directory {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    #directory.grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+    }
+
+    .page-banner h1 {
+        font-size: 2rem;
+    }
+}

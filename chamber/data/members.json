@@ -1,0 +1,84 @@
+{
+    "members": [
+        {
+            "name": "Asaba Grain & Produce Traders",
+            "address": "14 Nnebisi Road, Asaba, Delta State",
+            "phone": "+234 803 214 5567",
+            "url": "https://asabagrain.example.com",
+            "image": "asaba-grain.webp",
+            "level": 3,
+            "founded": 2009,
+            "tagline": "Wholesale grain and farm produce supplier serving Delta and Anambra states."
+        },
+        {
+            "name": "Niger Bridge Motors",
+            "address": "22 Okpanam Road, Asaba, Delta State",
+            "phone": "+234 805 671 2290",
+            "url": "https://nigerbridgemotors.example.com",
+            "image": "niger-bridge-motors.webp",
+            "level": 3,
+            "founded": 2015,
+            "tagline": "Auto sales, servicing, and spare parts for the Asaba metro area."
+        },
+        {
+            "name": "DeltaTech Cyber Cafe & Print Hub",
+            "address": "7 Summit Road, Asaba, Delta State",
+            "phone": "+234 807 902 3341",
+            "url": "https://deltatechhub.example.com",
+            "image": "deltatech-hub.jpg",
+            "level": 2,
+            "founded": 2018,
+            "tagline": "Printing, browsing, and document services near the state secretariat."
+        },
+        {
+            "name": "Mama Ngozi's Kitchen",
+            "address": "Illah Road, Asaba, Delta State",
+            "phone": "+234 802 445 8871",
+            "url": "https://mamangozikitchen.example.com",
+            "image": "mama-ngozi-kitchen.webp",
+            "level": 2,
+            "founded": 2012,
+            "tagline": "Local eatery known for banga soup and jollof rice catering."
+        },
+        {
+            "name": "Anwai Legal Chambers",
+            "address": "3 Anwai Road, Asaba, Delta State",
+            "phone": "+234 809 113 6602",
+            "url": "https://anwailegal.example.com",
+            "image": "anwai-legal.webp",
+            "level": 3,
+            "founded": 2005,
+            "tagline": "Corporate, property, and family law practice serving Delta State."
+        },
+        {
+            "name": "Riverside Boutique Asaba",
+            "address": "Cable Point, Asaba, Delta State",
+            "phone": "+234 806 330 4471",
+            "url": "https://riversideboutique.example.com",
+            "image": "riverside-boutique.webp",
+            "level": 1,
+            "founded": 2021,
+            "tagline": "Fashion boutique carrying Ankara and contemporary Nigerian styles."
+        },
+        {
+            "name": "Delta Solar Solutions",
+            "address": "9 Trinity Road, Asaba, Delta State",
+            "phone": "+234 810 227 9903",
+            "url": "https://deltasolarng.example.com",
+            "image": "delta-solar.webp",
+            "level": 2,
+            "founded": 2020,
+            "tagline": "Solar installation and inverter servicing for homes and small businesses."
+        },
+        {
+            "name": "Quicksure Logistics",
+            "address": "Km 3 Asaba-Benin Expressway, Delta State",
+            "phone": "+234 813 004 5518",
+            "url": "https://quicksurelogistics.example.com",
+            "image": "quicksure-logistics.webp",
+            "level": 1,
+            "founded": 2019,
+            "tagline": "Intra-state courier and haulage services."
+        }
+    ]
+}
