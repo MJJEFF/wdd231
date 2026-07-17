@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Home page for the Asaba Chamber of Commerce - connecting local businesses in Delta State, Nigeria.">
+    <meta name="author" content="Jeffrey Akanama">
+    <title>Asaba Chamber of Commerce</title>
+
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Facebook / social sharing meta -->
+    <meta property="og:title" content="Asaba Chamber of Commerce">
+    <meta property="og:description" content="Connecting and promoting local businesses in Asaba, Delta State, Nigeria.">
+    <meta property="og:image" content="https://mjjeff.github.io/WDD231/chamber/images/chamber-social.jpg">
+    <meta property="og:url" content="https://mjjeff.github.io/WDD231/chamber/index.html">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/home.js" defer></script>
+</head>
+
+<body class="home-page">
+
+    <header>
+        <div class="logo">
+            <img src="images/logo.svg" alt="Asaba Chamber of Commerce logo" width="42" height="42">
+            <span>Asaba Chamber of Commerce</span>
+        </div>
+        <button id="menu" aria-label="Menu">☰</button>
+
+        <nav id="nav">
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- hero -->
+        <section class="hero">
+            <img src="images/hero.jpg" alt="Nnebisi Road business district in Asaba, Delta State" class="hero-img">
+            <div class="hero-overlay">
+                <h1>Growing Business Together in Asaba</h1>
+                <p>The Asaba Chamber of Commerce connects, promotes, and advocates for the businesses that keep our
+                    community thriving.</p>
+                <a href="join.html" class="cta-btn">Join the Chamber</a>
+            </div>
+        </section>
+
+        <!-- current events -->
+        <section class="card events">
+            <h2>Upcoming Events</h2>
+            <ul class="events-list">
+                <li>
+                    <span class="event-date">Aug 8</span>
+                    <span class="event-name">Chamber Networking Breakfast — Summit Hall, Asaba</span>
+                </li>
+                <li>
+                    <span class="event-date">Aug 22</span>
+                    <span class="event-name">Small Business Grant Workshop — DeltaTech Hub</span>
+                </li>
+                <li>
+                    <span class="event-date">Sep 5</span>
+                    <span class="event-name">Annual Asaba Trade Fair — Cable Point Grounds</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- weather -->
+        <section class="card weather">
+            <h2>Asaba Weather</h2>
+            <div id="current-weather">
+                <p>Loading current weather...</p>
+            </div>
+            <div id="forecast" class="forecast-grid">
+                <p>Loading forecast...</p>
+            </div>
+        </section>
+
+        <!-- spotlights -->
+        <section class="card spotlight-section">
+            <h2>Member Spotlights</h2>
+            <div id="spotlights" class="spotlight-grid">
+                <p>Loading spotlights...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/jeffreyakanama" target="_blank">
+                <img src="images/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/MJJEFF" target="_blank">
+                <img src="images/github.svg" alt="GitHub">
+            </a>
+            <a href="https://x.com/MJ_JEFF_" target="_blank">
+                <img src="images/x.svg" alt="X">
+            </a>
+        </div>
+
+        <p>Asaba Chamber of Commerce &bull; Nnebisi Road, Asaba, Delta State &bull; (+234)09021780920</p>
+
+        <p>
+            &copy; <span id="currentyear"></span> Jeffrey Akanama &bull; WDD 231
+        </p>
+
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>
