@@ -1,0 +1,232 @@
+Join · HTML
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Apply for membership with the Asaba Chamber of Commerce - choose from NP, Bronze, Silver, or Gold membership levels.">
+    <meta name="author" content="Jeffrey Akanama">
+    <title>Asaba Chamber of Commerce | Join</title>
+
+    <link rel="icon" href="favicon.ico">
+
+    <!-- Facebook / social sharing meta -->
+    <meta property="og:title" content="Join the Asaba Chamber of Commerce">
+    <meta property="og:description"
+        content="Apply for membership and grow your business with the Asaba Chamber of Commerce.">
+    <meta property="og:image" content="https://mjjeff.github.io/wdd231/chamber/images/hero.jpg">
+    <meta property="og:url" content="https://mjjeff.github.io/wdd231/chamber/join.html">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body class="join-page">
+
+    <header>
+        <div class="logo">
+            <img src="images/logo.svg" alt="Asaba Chamber of Commerce logo" width="42" height="42">
+            <span>Asaba Chamber of Commerce</span>
+        </div>
+        <button id="menu" aria-label="Menu">☰</button>
+
+        <nav id="nav">
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="page-banner">
+            <h1>Join the Chamber</h1>
+            <p>Become a member and connect your business with the Asaba community.</p>
+        </section>
+
+        <div class="join-layout">
+
+            <!-- application form -->
+            <form action="thankyou.html" method="get" class="join-form">
+
+                <label for="first-name">
+                    First Name
+                    <input type="text" id="first-name" name="firstName" title="Your first name" required
+                        autocomplete="given-name">
+                </label>
+
+                <label for="last-name">
+                    Last Name
+                    <input type="text" id="last-name" name="lastName" title="Your last name" required
+                        autocomplete="family-name">
+                </label>
+
+                <label for="org-title">
+                    Organizational Title
+                    <input type="text" id="org-title" name="orgTitle" title="Your title within the organization"
+                        autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}"
+                        placeholder="e.g. Operations Manager">
+                    <small>Letters, hyphens, and spaces only. Minimum 7 characters.</small>
+                </label>
+
+                <label for="email">
+                    Email Address
+                    <input type="email" id="email" name="email" title="Your email address" required autocomplete="email"
+                        placeholder="name@example.com">
+                </label>
+
+                <label for="phone">
+                    Mobile Phone
+                    <input type="tel" id="phone" name="phone" title="Your mobile phone number" required
+                        autocomplete="tel">
+                </label>
+
+                <label for="business-name">
+                    Business/Organization Name
+                    <input type="text" id="business-name" name="businessName" title="Your business or organization name"
+                        required autocomplete="organization">
+                </label>
+
+                <label for="membership-level">
+                    Membership Level
+                    <select id="membership-level" name="membershipLevel" title="Choose a membership level">
+                        <option value="np">NP Membership (Non-Profit, Free)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label for="description">
+                    Business/Organization Description
+                    <textarea id="description" name="description" title="Briefly describe your business or organization"
+                        rows="4"></textarea>
+                </label>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+
+                <input type="submit" value="Submit Application">
+
+            </form>
+
+            <!-- membership level cards -->
+            <div class="membership-cards">
+
+                <article class="member-tier-card tier-np">
+                    <h3>NP Membership</h3>
+                    <p class="tier-price">Free</p>
+                    <p>For registered non-profit organizations serving the Asaba community.</p>
+                    <button class="modal-trigger" data-modal="modal-np">Learn more</button>
+                </article>
+
+                <article class="member-tier-card tier-bronze">
+                    <h3>Bronze Membership</h3>
+                    <p class="tier-price">₦15,000/yr</p>
+                    <p>Entry-level membership with directory listing and event access.</p>
+                    <button class="modal-trigger" data-modal="modal-bronze">Learn more</button>
+                </article>
+
+                <article class="member-tier-card tier-silver">
+                    <h3>Silver Membership</h3>
+                    <p class="tier-price">₦40,000/yr</p>
+                    <p>Added visibility with newsletter mentions and training discounts.</p>
+                    <button class="modal-trigger" data-modal="modal-silver">Learn more</button>
+                </article>
+
+                <article class="member-tier-card tier-gold">
+                    <h3>Gold Membership</h3>
+                    <p class="tier-price">₦85,000/yr</p>
+                    <p>Full benefits including home page spotlights and sponsorships.</p>
+                    <button class="modal-trigger" data-modal="modal-gold">Learn more</button>
+                </article>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- modals -->
+    <dialog id="modal-np" class="member-modal">
+        <h2>NP Membership Benefits</h2>
+        <ul>
+            <li>Free directory listing</li>
+            <li>Access to chamber networking events</li>
+            <li>Monthly community newsletter</li>
+        </ul>
+        <button class="modal-close">Close</button>
+    </dialog>
+
+    <dialog id="modal-bronze" class="member-modal">
+        <h2>Bronze Membership Benefits</h2>
+        <ul>
+            <li>Everything in NP Membership</li>
+            <li>Standard directory listing with logo</li>
+            <li>Discounted event tickets</li>
+        </ul>
+        <button class="modal-close">Close</button>
+    </dialog>
+
+    <dialog id="modal-silver" class="member-modal">
+        <h2>Silver Membership Benefits</h2>
+        <ul>
+            <li>Everything in Bronze Membership</li>
+            <li>Featured newsletter mention twice a year</li>
+            <li>Discounted training workshop seats</li>
+            <li>Eligible for home page spotlight rotation</li>
+        </ul>
+        <button class="modal-close">Close</button>
+    </dialog>
+
+    <dialog id="modal-gold" class="member-modal">
+        <h2>Gold Membership Benefits</h2>
+        <ul>
+            <li>Everything in Silver Membership</li>
+            <li>Priority home page spotlight placement</li>
+            <li>Free luncheon sponsorship slot annually</li>
+            <li>Dedicated social media promotion</li>
+        </ul>
+        <button class="modal-close">Close</button>
+    </dialog>
+
+    <footer>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/jeffreyakanama" target="_blank">
+                <img src="images/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/MJJEFF" target="_blank">
+                <img src="images/github.svg" alt="GitHub">
+            </a>
+            <a href="https://x.com/MJ_JEFF_" target="_blank">
+                <img src="images/x-logo.svg" alt="X">
+            </a>
+        </div>
+
+        <p>Asaba Chamber of Commerce &bull; Nnebisi Road, Asaba, Delta State &bull; (+234)09021780920</p>
+
+        <p>
+            &copy; <span id="currentyear"></span> Jeffrey Akanama &bull; WDD 231
+        </p>
+
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>
