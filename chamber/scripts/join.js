@@ -1,5 +1,3 @@
-// join.js
-
 // hidden timestamp field - records the moment the form was loaded
 document.querySelector("#timestamp").value = new Date().toISOString();
 

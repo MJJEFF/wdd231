@@ -1,4 +1,3 @@
-// thankyou.js
 // Reads the form values passed via the GET query string and displays
 // the required fields back to the applicant as a confirmation.
 

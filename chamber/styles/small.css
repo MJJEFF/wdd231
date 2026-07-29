@@ -10,6 +10,34 @@
     --clr-text: #232323;
     --clr-muted: #5c5c5c;
     --font-body: 'Roboto', sans-serif;
+
+    /* neutrals */
+    --clr-white: #ffffff;
+    --clr-dark: #1a1a1a;
+    --clr-border: #eeeeee;
+    --clr-border-strong: #cccccc;
+
+    /* footer / banner text tints */
+    --clr-banner-text: #dfe8ee;
+    --clr-footer-text: #e6ecef;
+
+    /* tier badge colors */
+    --clr-tier1-bg: #e3e3e3;
+    --clr-tier1-text: #444444;
+    --clr-tier2-bg: #d9d9d9;
+    --clr-tier2-text: #2b2b2b;
+
+    /* membership card accents */
+    --clr-tier-np: #6d9dc5;
+    --clr-tier-bronze: #a5672f;
+    --clr-tier-price: #8a5f1e;
+
+    /* semi-transparent overlays, expressed as rgb + alpha via var() */
+    --clr-white-border: rgba(255, 255, 255, 0.15);
+    --clr-shadow: rgba(0, 0, 0, 0.12);
+    --clr-hero-top: rgba(11, 61, 89, 0.35);
+    --clr-hero-bottom: rgba(11, 61, 89, 0.85);
+    --clr-modal-backdrop: rgba(11, 61, 89, 0.55);
 }
 
 body {
@@ -25,7 +53,7 @@ header {
     justify-content: space-between;
     padding: 0.75rem 1rem;
     background-color: var(--clr-primary);
-    color: #fff;
+    color: var(--clr-white);
     position: relative;
 }
 
@@ -44,7 +72,7 @@ header .logo img {
 #menu {
     background: none;
     border: none;
-    color: #fff;
+    color: var(--clr-white);
     font-size: 1.6rem;
     line-height: 1;
 }
@@ -71,21 +99,21 @@ nav#nav ul {
 nav#nav a {
     display: block;
     padding: 0.85rem 1rem;
-    color: #fff;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--clr-white);
+    border-top: 1px solid var(--clr-white-border);
 }
 
 nav#nav a.active,
 nav#nav a:hover {
     background-color: var(--clr-accent);
-    color: #1a1a1a;
+    color: var(--clr-dark);
 }
 
 /* ---------- generic page header banner ---------- */
 .page-banner {
     background-color: var(--clr-primary);
     background: linear-gradient(120deg, var(--clr-primary), var(--clr-primary-light));
-    color: #fff;
+    color: var(--clr-white);
     padding: 1.75rem 1rem;
 }
 
@@ -95,7 +123,7 @@ nav#nav a:hover {
 
 .page-banner p {
     margin-top: 0.35rem;
-    color: #dfe8ee;
+    color: var(--clr-banner-text);
     font-size: 0.95rem;
 }
 
@@ -130,7 +158,7 @@ nav#nav a:hover {
 
 .view-toggle button.active {
     background-color: var(--clr-primary);
-    color: #fff;
+    color: var(--clr-white);
 }
 
 /* ---------- member cards / grid ---------- */
@@ -162,7 +190,7 @@ nav#nav a:hover {
     background-color: var(--clr-card);
     border-radius: 10px;
     padding: 1rem;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 1px 4px var(--clr-shadow);
     position: relative;
 }
 
@@ -206,25 +234,25 @@ nav#nav a:hover {
 }
 
 .tier-1 {
-    background-color: #e3e3e3;
-    color: #444;
+    background-color: var(--clr-tier1-bg);
+    color: var(--clr-tier1-text);
 }
 
 .tier-2 {
-    background-color: #d9d9d9;
-    color: #2b2b2b;
+    background-color: var(--clr-tier2-bg);
+    color: var(--clr-tier2-text);
     border: 1px solid var(--clr-silver);
 }
 
 .tier-3 {
     background-color: var(--clr-accent);
-    color: #fff;
+    color: var(--clr-white);
 }
 
 /* ---------- footer ---------- */
 footer {
     background-color: var(--clr-primary);
-    color: #e6ecef;
+    color: var(--clr-footer-text);
     text-align: center;
     padding: 1.25rem 1rem;
     font-size: 0.85rem;
@@ -262,8 +290,8 @@ footer .social img {
     position: absolute;
     inset: 0;
     background-color: var(--clr-primary);
-    background: linear-gradient(180deg, rgba(11, 61, 89, 0.35), rgba(11, 61, 89, 0.85));
-    color: #fff;
+    background: linear-gradient(180deg, var(--clr-hero-top), var(--clr-hero-bottom));
+    color: var(--clr-white);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -285,7 +313,7 @@ footer .social img {
     display: inline-block;
     align-self: flex-start;
     background-color: var(--clr-accent);
-    color: #1a1a1a;
+    color: var(--clr-dark);
     font-weight: 700;
     padding: 0.6rem 1.1rem;
     border-radius: 6px;
@@ -298,7 +326,7 @@ main .card {
     margin: 1rem;
     padding: 1.1rem;
     border-radius: 10px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 4px var(--clr-shadow);
 }
 
 main .card h2 {
@@ -312,7 +340,7 @@ main .card h2 {
     display: flex;
     gap: 0.75rem;
     padding: 0.5rem 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--clr-border);
     font-size: 0.9rem;
 }
 
@@ -323,7 +351,7 @@ main .card h2 {
 .event-date {
     flex: 0 0 60px;
     font-weight: 700;
-    color: #1a1a1a;
+    color: var(--clr-dark);
     background-color: var(--clr-accent);
     padding: 0.15rem 0.4rem;
     border-radius: 4px;
@@ -377,7 +405,7 @@ main .card h2 {
 
 .spotlight-card {
     position: relative;
-    border: 1px solid #eee;
+    border: 1px solid var(--clr-border);
     border-radius: 10px;
     padding: 1rem;
     text-align: center;
@@ -425,7 +453,7 @@ main .card h2 {
     background-color: var(--clr-card);
     border-radius: 10px;
     padding: 1.25rem;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 4px var(--clr-shadow);
     display: flex;
     flex-direction: column;
     gap: 0.9rem;
@@ -443,7 +471,7 @@ main .card h2 {
 .join-form input,
 .join-form select,
 .join-form textarea {
-    border: 1px solid #ccc;
+    border: 1px solid var(--clr-border-strong);
     border-radius: 6px;
     padding: 0.55rem 0.6rem;
     font-weight: 400;
@@ -465,7 +493,7 @@ main .card h2 {
 
 .join-form input[type="submit"] {
     background-color: var(--clr-primary);
-    color: #fff;
+    color: var(--clr-white);
     border: none;
     padding: 0.7rem;
     border-radius: 6px;
@@ -489,7 +517,7 @@ main .card h2 {
     background-color: var(--clr-card);
     border-radius: 10px;
     padding: 1.1rem;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 4px var(--clr-shadow);
     border-top: 5px solid var(--clr-silver);
     opacity: 0;
     transform: translateY(16px);
@@ -497,12 +525,12 @@ main .card h2 {
 }
 
 .member-tier-card.tier-np {
-    border-top-color: #6d9dc5;
+    border-top-color: var(--clr-tier-np);
     animation-delay: 0s;
 }
 
 .member-tier-card.tier-bronze {
-    border-top-color: #a5672f;
+    border-top-color: var(--clr-tier-bronze);
     animation-delay: 0.15s;
 }
 
@@ -530,7 +558,7 @@ main .card h2 {
 
 .tier-price {
     font-weight: 700;
-    color: #8a5f1e;
+    color: var(--clr-tier-price);
     margin-bottom: 0.5rem;
 }
 
@@ -552,7 +580,7 @@ main .card h2 {
 
 .modal-trigger:hover {
     background-color: var(--clr-primary);
-    color: #fff;
+    color: var(--clr-white);
 }
 
 /* ---------- modals ---------- */
@@ -565,7 +593,7 @@ main .card h2 {
 }
 
 .member-modal::backdrop {
-    background-color: rgba(11, 61, 89, 0.55);
+    background-color: var(--clr-modal-backdrop);
 }
 
 .member-modal h2 {
@@ -586,7 +614,7 @@ main .card h2 {
 
 .member-modal .modal-close {
     background-color: var(--clr-primary);
-    color: #fff;
+    color: var(--clr-white);
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 6px;
@@ -610,4 +638,101 @@ main .card h2 {
 .confirmation dd {
     margin: 0;
     color: var(--clr-text);
+}
+
+/* ================================================
+   DISCOVER PAGE (discover.html)
+   ================================================ */
+
+.visit-message {
+    background-color: var(--clr-accent);
+    color: var(--clr-dark);
+    font-weight: 700;
+    text-align: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* mobile / small screens: single column, stacked in order */
+.discover-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "a1"
+        "a2"
+        "a3"
+        "a4"
+        "a5"
+        "a6"
+        "a7"
+        "a8";
+}
+
+.discover-card {
+    background-color: var(--clr-card);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 1px 4px var(--clr-shadow);
+    display: flex;
+    flex-direction: column;
+}
+
+.discover-card h2 {
+    color: var(--clr-primary);
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+}
+
+.discover-card figure {
+    margin: 0 0 0.6rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.discover-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.discover-card address {
+    font-style: normal;
+    font-size: 0.82rem;
+    color: var(--clr-muted);
+    margin-bottom: 0.4rem;
+}
+
+.discover-card p {
+    font-size: 0.87rem;
+    color: var(--clr-text);
+    margin-bottom: 0.6rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.discover-card.expanded p {
+    -webkit-line-clamp: unset;
+    overflow: visible;
+}
+
+.discover-card .learn-more {
+    align-self: flex-start;
+    background: none;
+    border: 2px solid var(--clr-primary);
+    color: var(--clr-primary);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.82rem;
+    margin-top: auto;
+}
+
+.discover-card .learn-more:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
 }
