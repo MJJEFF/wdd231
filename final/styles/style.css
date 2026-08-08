@@ -1,0 +1,560 @@
+/* =========================================================
+   Vital Start — Fitness & Wellness
+   Design tokens
+========================================================= */
+:root {
+    --forest: #16261e;
+    --forest-mid: #1f4033;
+    --paper: #f2f6f1;
+    --paper-card: #ffffff;
+    --coral: #ff5f3d;
+    --gold: #f4b93f;
+    --line: #d8e2d9;
+    --text: #16241c;
+    --text-soft: #4c5b52;
+
+    --font-display: "Space Grotesk", "Arial Narrow", sans-serif;
+    --font-body: "Inter", system-ui, sans-serif;
+
+    --radius: 14px;
+    --max: 1100px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--text);
+    background: var(--paper);
+    line-height: 1.55;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-display);
+    line-height: 1.05;
+    margin: 0 0 0.5em;
+    letter-spacing: -0.01em;
+}
+
+.wrap {
+    max-width: var(--max);
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+}
+
+/* =========================================================
+   Header / Responsive Nav (hamburger < flex)
+========================================================= */
+header {
+    background: var(--forest);
+    color: var(--paper);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 0.85rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--paper);
+    text-decoration: none;
+}
+
+.brand .pulse {
+    width: 22px;
+    height: 22px;
+    flex: none;
+}
+
+.nav-toggle {
+    background: none;
+    border: 2px solid var(--paper);
+    border-radius: 8px;
+    width: 42px;
+    height: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--paper);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: block;
+    width: 100%;
+}
+
+nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid rgba(242, 246, 241, 0.15);
+}
+
+nav ul.open {
+    display: flex;
+}
+
+nav ul li a {
+    display: block;
+    padding: 0.9rem 0.25rem;
+    text-decoration: none;
+    color: var(--paper);
+    border-bottom: 1px solid rgba(242, 246, 241, 0.1);
+    font-weight: 500;
+}
+
+nav ul li a[aria-current="page"] {
+    color: var(--gold);
+    font-weight: 700;
+}
+
+@media (min-width: 720px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .header-inner {
+        flex-wrap: wrap;
+    }
+
+    nav ul {
+        display: flex !important;
+        flex-direction: row;
+        gap: 1.75rem;
+        border-top: none;
+    }
+
+    nav ul li a {
+        padding: 0.25rem 0;
+        border-bottom: 2px solid transparent;
+    }
+
+    nav ul li a[aria-current="page"] {
+        border-bottom: 2px solid var(--gold);
+    }
+}
+
+/* =========================================================
+   Hero
+========================================================= */
+.hero {
+    background: linear-gradient(160deg, var(--forest) 0%, var(--forest-mid) 100%);
+    color: var(--paper);
+}
+
+.hero-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-block: 3rem 3.5rem;
+    align-items: center;
+}
+
+@media (min-width: 800px) {
+    .hero-inner {
+        grid-template-columns: 1.1fr 0.9fr;
+        padding-block: 4.5rem;
+    }
+}
+
+.hero h1 {
+    font-size: clamp(2.1rem, 5vw, 3.4rem);
+}
+
+.hero .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.hero p.lead {
+    font-size: 1.1rem;
+    color: #dce6df;
+    max-width: 46ch;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--coral);
+    color: #fff;
+    text-decoration: none;
+    padding: 0.85rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: transform 0.15s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 2px solid var(--paper);
+    color: var(--paper);
+}
+
+.hero-actions {
+    display: flex;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+/* pulse line signature graphic */
+.pulseline {
+    width: 100%;
+    height: auto;
+}
+
+/* =========================================================
+   Sections / cards
+========================================================= */
+section {
+    padding-block: 3rem;
+}
+
+.section-head {
+    max-width: 60ch;
+    margin-bottom: 2rem;
+}
+
+.section-head .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.75rem;
+    color: var(--coral);
+    font-weight: 700;
+}
+
+.grid-3 {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 960px) {
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card {
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.4rem;
+}
+
+.card .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    color: var(--forest-mid);
+    background: #e4ede2;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    margin-bottom: 0.6rem;
+}
+
+.stat-band {
+    background: var(--forest);
+    color: var(--paper);
+    border-radius: var(--radius);
+    padding: 2rem 1.5rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+@media (min-width: 700px) {
+    .stat-band {
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+    }
+}
+
+.stat-band .num {
+    font-family: var(--font-display);
+    font-size: 2.4rem;
+    color: var(--gold);
+}
+
+/* =========================================================
+   Workout cards / filter bar / modal
+========================================================= */
+.filter-bar {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.filter-bar button {
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.filter-bar button[aria-pressed="true"] {
+    background: var(--forest);
+    color: var(--paper);
+    border-color: var(--forest);
+}
+
+.exercise-card {
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    font: inherit;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.exercise-card:hover {
+    border-color: var(--coral);
+}
+
+.exercise-card h3 {
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+.exercise-card .meta {
+    font-size: 0.82rem;
+    color: var(--text-soft);
+}
+
+.exercise-card .fav {
+    margin-left: auto;
+    border: none;
+    background: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+dialog#exerciseModal {
+    border: none;
+    border-radius: var(--radius);
+    padding: 0;
+    max-width: 480px;
+    width: 90vw;
+}
+
+dialog#exerciseModal::backdrop {
+    background: rgba(22, 38, 30, 0.55);
+}
+
+.modal-body {
+    padding: 1.75rem;
+}
+
+.modal-body .tag {
+    margin-bottom: 0.75rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.9rem;
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: var(--text-soft);
+}
+
+dialog#exerciseModal {
+    position: relative;
+}
+
+/* =========================================================
+   Forms
+========================================================= */
+form {
+    display: grid;
+    gap: 1.1rem;
+    max-width: 560px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.35rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 0.7rem 0.85rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font: inherit;
+    background: #fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+a:focus {
+    outline: 3px solid var(--gold);
+    outline-offset: 2px;
+}
+
+fieldset {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+legend {
+    font-weight: 700;
+    padding-inline: 0.4rem;
+}
+
+.result-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 0.75rem;
+}
+
+.result-list li {
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 0.9rem 1.1rem;
+}
+
+.result-list strong {
+    color: var(--forest-mid);
+}
+
+/* =========================================================
+   Footer
+========================================================= */
+footer {
+    background: var(--forest);
+    color: #cfdbd2;
+    margin-top: 3rem;
+}
+
+.footer-inner {
+    padding-block: 2rem;
+    display: grid;
+    gap: 1rem;
+    font-size: 0.88rem;
+}
+
+footer a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+/* form action page */
+.submission-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+}
+
+.submission-list li {
+    background: var(--paper-card);
+    border: 1px solid var(--line);
+    border-radius: 0.5rem;
+    padding: 0.85rem 1rem;
+}
+
+/* utility */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}

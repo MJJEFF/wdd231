@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Vital Start</title>
+    <meta name="description"
+        content="Get in touch with Vital Start — send a question, share feedback, or tell us about your fitness goals." />
+    <meta name="author" content="Jeffrey Akanama" />
+
+    <meta property="og:title" content="Contact | Vital Start" />
+    <meta property="og:description" content="Send us a message about your fitness and wellness goals." />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="images/favicon-32.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="wrap header-inner">
+            <a href="index.html" class="brand">
+                <svg class="pulse" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M2 12h4l2-7 4 14 2-7h8" stroke="#f4b93f" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                Vital Start
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+                aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav>
+                <ul id="primary-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="workouts.html">Workouts</a></li>
+                    <li><a href="nutrition.html">Nutrition &amp; Motivation</a></li>
+                    <li><a href="contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <section class="section-head" style="padding-top:2.5rem;">
+            <p class="eyebrow">Get In Touch</p>
+            <h1>Tell us about your goals.</h1>
+            <p>Have a question, some feedback, or just want to say hi? Fill out the form below and we'll follow up.</p>
+        </section>
+
+        <section style="max-width:640px; padding-bottom:3rem;">
+            <form action="thanks.html" method="get">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required minlength="2" placeholder="Your full name" />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com" />
+
+                <label for="goal">Primary Goal</label>
+                <select id="goal" name="goal" required>
+                    <option value="" disabled selected>Choose a goal</option>
+                    <option value="Build Strength">Build Strength</option>
+                    <option value="Improve Endurance">Improve Endurance</option>
+                    <option value="Better Nutrition">Better Nutrition</option>
+                    <option value="General Wellness">General Wellness</option>
+                </select>
+
+                <label for="level">Fitness Level</label>
+                <select id="level" name="level" required>
+                    <option value="" disabled selected>Choose your level</option>
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required minlength="10"
+                    placeholder="What would you like to tell us?"></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap footer-inner">
+            <p>&copy; 2026 Vital Start. Built by Jeffrey Akanama.</p>
+            <div class="footer-links">
+                <a href="attributions.html">Attributions</a>
+                <a href="https://youtube.com" target="_blank" rel="noopener">Project Demo Video</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { initNav } from "./scripts/nav.js";
+        initNav();
+    </script>
+</body>
+
+</html>

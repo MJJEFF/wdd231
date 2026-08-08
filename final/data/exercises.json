@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "name": "Bodyweight Squat",
+        "category": "Lower Body",
+        "difficulty": "Beginner",
+        "equipment": "None",
+        "description": "A foundational lower-body movement that builds leg and glute strength while improving mobility."
+    },
+    {
+        "id": 2,
+        "name": "Push-Up",
+        "category": "Upper Body",
+        "difficulty": "Beginner",
+        "equipment": "None",
+        "description": "Classic bodyweight press that targets chest, shoulders, and triceps."
+    },
+    {
+        "id": 3,
+        "name": "Plank",
+        "category": "Core",
+        "difficulty": "Beginner",
+        "equipment": "None",
+        "description": "An isometric hold that strengthens the entire core and improves posture."
+    },
+    {
+        "id": 4,
+        "name": "Walking Lunge",
+        "category": "Lower Body",
+        "difficulty": "Beginner",
+        "equipment": "None",
+        "description": "A dynamic single-leg movement that builds balance and leg strength."
+    },
+    {
+        "id": 5,
+        "name": "Dumbbell Row",
+        "category": "Upper Body",
+        "difficulty": "Intermediate",
+        "equipment": "Dumbbells",
+        "description": "A pulling exercise that strengthens the back and improves posture."
+    },
+    {
+        "id": 6,
+        "name": "Glute Bridge",
+        "category": "Lower Body",
+        "difficulty": "Beginner",
+        "equipment": "None",
+        "description": "Activates the glutes and hamstrings while protecting the lower back."
+    },
+    {
+        "id": 7,
+        "name": "Mountain Climbers",
+        "category": "Cardio",
+        "difficulty": "Intermediate",
+        "equipment": "None",
+        "description": "A fast-paced core and cardio movement that raises heart rate quickly."
+    },
+    {
+        "id": 8,
+        "name": "Bicycle Crunch",
+        "category": "Core",
+        "difficulty": "Beginner",
+        "equipment": "None",
+        "description": "A rotational core exercise that targets the obliques and abdominals."
+    },
+    {
+        "id": 9,
+        "name": "Jumping Jacks",
+        "category": "Cardio",
+        "difficulty": "Beginner",
+        "equipment": "None",
+        "description": "A full-body warm-up movement that elevates heart rate and improves coordination."
+    },
+    {
+        "id": 10,
+        "name": "Dumbbell Shoulder Press",
+        "category": "Upper Body",
+        "difficulty": "Intermediate",
+        "equipment": "Dumbbells",
+        "description": "Builds shoulder strength and stability through an overhead pressing motion."
+    },
+    {
+        "id": 11,
+        "name": "Step-Up",
+        "category": "Lower Body",
+        "difficulty": "Beginner",
+        "equipment": "Bench or Step",
+        "description": "A functional single-leg exercise that builds strength and balance."
+    },
+    {
+        "id": 12,
+        "name": "Superman Hold",
+        "category": "Core",
+        "difficulty": "Beginner",
+        "equipment": "None",
+        "description": "Strengthens the lower back and posterior chain through an extended hold."
+    },
+    {
+        "id": 13,
+        "name": "Burpee",
+        "category": "Cardio",
+        "difficulty": "Advanced",
+        "equipment": "None",
+        "description": "A high-intensity full-body movement combining a squat, plank, and jump."
+    },
+    {
+        "id": 14,
+        "name": "Resistance Band Row",
+        "category": "Upper Body",
+        "difficulty": "Beginner",
+        "equipment": "Resistance Band",
+        "description": "A joint-friendly pulling exercise that builds back and arm strength."
+    },
+    {
+        "id": 15,
+        "name": "Wall Sit",
+        "category": "Lower Body",
+        "difficulty": "Beginner",
+        "equipment": "None",
+        "description": "An isometric hold that builds quad endurance and mental toughness."
+    },
+    {
+        "id": 16,
+        "name": "Russian Twist",
+        "category": "Core",
+        "difficulty": "Intermediate",
+        "equipment": "None",
+        "description": "A rotational movement that targets the obliques and improves core stability."
+    },
+    {
+        "id": 17,
+        "name": "High Knees",
+        "category": "Cardio",
+        "difficulty": "Beginner",
+        "equipment": "None",
+        "description": "A quick-tempo cardio drill that raises heart rate and improves coordination."
+    },
+    {
+        "id": 18,
+        "name": "Tricep Dip",
+        "category": "Upper Body",
+        "difficulty": "Intermediate",
+        "equipment": "Bench or Chair",
+        "description": "Targets the triceps using bodyweight resistance on a stable surface."
+    }
+]

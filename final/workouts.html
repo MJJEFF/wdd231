@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workout Routines | Vital Start</title>
+    <meta name="description"
+        content="Browse beginner-friendly workout routines by category, view full exercise details, and save your favorites." />
+    <meta name="author" content="Jeffrey Akanama" />
+
+    <meta property="og:title" content="Workout Routines | Vital Start" />
+    <meta property="og:description" content="Beginner-friendly workout routines you can filter and explore." />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="images/favicon-32.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="wrap header-inner">
+            <a href="index.html" class="brand">
+                <svg class="pulse" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M2 12h4l2-7 4 14 2-7h8" stroke="#f4b93f" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                Vital Start
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+                aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav>
+                <ul id="primary-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="workouts.html" aria-current="page">Workouts</a></li>
+                    <li><a href="nutrition.html">Nutrition &amp; Motivation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <section class="section-head" style="padding-top:2.5rem;">
+            <p class="eyebrow">Workout Library</p>
+            <h1>Find a routine that fits today.</h1>
+            <p>Filter by category, tap a card to see the full exercise details, and star your favorites — they're saved
+                right in your browser.</p>
+            <p id="loadStatus" role="status" aria-live="polite">Loading exercises&hellip;</p>
+        </section>
+
+        <div id="filterBar" class="filter-bar" aria-label="Filter exercises by category"></div>
+
+        <section class="grid-3" id="exerciseGrid" aria-live="polite">
+            <!-- Dynamically generated exercise cards inserted here -->
+        </section>
+
+        <dialog id="exerciseModal" aria-labelledby="modalTitleRegion">
+            <button id="modalClose" class="modal-close" aria-label="Close dialog">&times;</button>
+            <div class="modal-body" id="modalBody" role="document">
+                <!-- Dynamic exercise detail content -->
+            </div>
+        </dialog>
+    </main>
+
+    <footer>
+        <div class="wrap footer-inner">
+            <p>&copy; 2026 Vital Start. Built byJeffrey Akanama.</p>
+            <div class="footer-links">
+                <a href="attributions.html">Attributions</a>
+                <a href="https://youtube.com" target="_blank" rel="noopener">Project Demo Video</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { initNav } from "./scripts/nav.js";
+        initNav();
+    </script>
+    <script type="module" src="scripts/workouts.js"></script>
+</body>
+
+</html>

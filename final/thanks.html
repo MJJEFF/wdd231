@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Message Received | Vital Start</title>
+    <meta name="description"
+        content="Confirmation page showing the details you submitted through the Vital Start contact form." />
+    <meta name="author" content="Jeffrey Akanama" />
+    <meta name="robots" content="noindex" />
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="images/favicon-32.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="wrap header-inner">
+            <a href="index.html" class="brand">
+                <svg class="pulse" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M2 12h4l2-7 4 14 2-7h8" stroke="#f4b93f" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                Vital Start
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+                aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav>
+                <ul id="primary-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="workouts.html">Workouts</a></li>
+                    <li><a href="nutrition.html">Nutrition &amp; Motivation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <section class="section-head" style="padding-top:2.5rem;">
+            <p class="eyebrow">Thank You</p>
+            <h1>Your message was received.</h1>
+            <p>Here's what you submitted:</p>
+        </section>
+
+        <section style="max-width:640px; padding-bottom:3rem;">
+            <ul id="submissionList" class="submission-list"></ul>
+            <p><a href="index.html" class="btn">Back to Home</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap footer-inner">
+            <p>&copy; 2026 Vital Start. Built by Jeffrey Akanama.</p>
+            <div class="footer-links">
+                <a href="attributions.html">Attributions</a>
+                <a href="https://youtube.com" target="_blank" rel="noopener">Project Demo Video</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { initNav } from "./scripts/nav.js";
+        initNav();
+    </script>
+    <script type="module" src="scripts/form-action.js"></script>
+</body>
+
+</html>

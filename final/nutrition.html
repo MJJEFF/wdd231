@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nutrition &amp; Motivation | Vital Start</title>
+    <meta name="description"
+        content="Learn beginner nutrition principles, simple meal ideas, and motivation strategies to support long-term wellness." />
+    <meta name="author" content="Jeffrey Akanama" />
+
+    <meta property="og:title" content="Nutrition & Motivation | Vital Start" />
+    <meta property="og:description"
+        content="Beginner nutrition principles and motivation strategies for lasting wellness." />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate icon" href="images/favicon-32.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="wrap header-inner">
+            <a href="index.html" class="brand">
+                <svg class="pulse" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M2 12h4l2-7 4 14 2-7h8" stroke="#f4b93f" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                Vital Start
+            </a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+                aria-label="Toggle navigation menu">
+                <span></span><span></span><span></span>
+            </button>
+            <nav>
+                <ul id="primary-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="workouts.html">Workouts</a></li>
+                    <li><a href="nutrition.html" aria-current="page">Nutrition &amp; Motivation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="wrap">
+            <div class="section-head" style="padding-top:2.5rem;">
+                <p class="eyebrow">Fuel &amp; Mindset</p>
+                <h1>Nutrition basics that stay simple.</h1>
+                <p>You don't need a strict diet to eat well. These principles focus on consistency over perfection.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <span class="tag">Principle</span>
+                    <h3>Build Balanced Plates</h3>
+                    <p>Aim for a mix of protein, vegetables, and whole grains at most meals rather than counting every
+                        gram.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">Principle</span>
+                    <h3>Hydrate First</h3>
+                    <p>Thirst is often mistaken for hunger. Start with water before reaching for a snack.</p>
+                </div>
+                <div class="card">
+                    <span class="tag">Principle</span>
+                    <h3>Plan Simple Meals</h3>
+                    <p>A short list of go-to meals reduces decision fatigue during busy weeks.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrap">
+            <div class="section-head">
+                <p class="eyebrow">Quick Meal Ideas</p>
+                <h2>Easy plates to start with</h2>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Breakfast</h3>
+                    <p>Greek yogurt, berries, and a handful of oats or granola.</p>
+                </div>
+                <div class="card">
+                    <h3>Lunch</h3>
+                    <p>Grilled chicken or beans over greens with olive oil and lemon.</p>
+                </div>
+                <div class="card">
+                    <h3>Dinner</h3>
+                    <p>Baked salmon or tofu, roasted vegetables, and a small portion of rice.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="wrap">
+            <div class="stat-band">
+                <div>
+                    <h3 style="color:var(--gold); margin-bottom:0.4rem;">Stay Consistent</h3>
+                    <p>Set one small, specific goal each week instead of overhauling everything at once.</p>
+                </div>
+                <div>
+                    <h3 style="color:var(--gold); margin-bottom:0.4rem;">Track Progress Kindly</h3>
+                    <p>Notice energy, sleep, and mood — not just the scale — as signs of progress.</p>
+                </div>
+                <div>
+                    <h3 style="color:var(--gold); margin-bottom:0.4rem;">Celebrate Small Wins</h3>
+                    <p>A completed workout or a balanced meal is a win worth recognizing on its own.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap footer-inner">
+            <p>&copy; 2026 Vital Start. Built by Jeffrey Akanama.</p>
+            <div class="footer-links">
+                <a href="attributions.html">Attributions</a>
+                <a href="https://youtube.com" target="_blank" rel="noopener">Project Demo Video</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { initNav } from "./scripts/nav.js";
+        initNav();
+    </script>
+</body>
+
+</html>
